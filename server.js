@@ -1,7 +1,9 @@
 const express = require('express') //requires express module
 const app = express()
-// const cors = require('cors')
+const cors = require('cors')
 const PORT = 8000
+
+app.use(cors())
 
 const foodtrucks = {
     'mississippi': {
@@ -215,4 +217,4 @@ app.get('/api/:state', (req, res)=>{
 
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`The server is running on port ${PORT}! You better go catch it!`)
-})
+}) //if heroku doesn't use our hardcoded port they use there own port 
