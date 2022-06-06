@@ -217,7 +217,7 @@ app.get('/css/style.css', (req,res)=>{
     res.json(foodtrucks)
   })
 
-app.get('/api/:state', (req, res)=>{
+app.get('/foodtrucks/:state', (req, res)=>{
     const state = req.params.state.toLowerCase()
   
     if(foodtrucks[state]) { //if state(property name) is a property of the foodtrucks object, respond with that properties object (the one you passsed into the brackets).
