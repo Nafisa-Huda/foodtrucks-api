@@ -205,6 +205,18 @@ app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/index.html')
 })
 
+app.get('/css/style.css', (req,res)=>{
+    res.sendFile(__dirname + '/css/style.css')
+  })
+  
+  app.get('/js/main.js', (req,res)=>{
+    res.sendFile(__dirname + '/js/main.js')
+  })
+  
+  app.get('/foodtrucks', (req,res)=>{
+    res.json(foodtrucks)
+  })
+
 app.get('/api/:state', (req, res)=>{
     const state = req.params.state.toLowerCase()
   
