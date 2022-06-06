@@ -5,7 +5,7 @@ const PORT = 8000
 
 app.use(cors())
 
-const foodtrucks = {
+const states = {
     'mississippi': {
         'cuisine': 'AMERICAN',
         'name': 'One Guy Steak and Chicken'
@@ -213,19 +213,19 @@ app.get('/css/style.css', (req,res)=>{
     res.sendFile(__dirname + '/js/main.js')
   })
   
-  app.get('/foodtrucks', (req,res)=>{
-    res.json(foodtrucks)
+  app.get('/states', (req,res)=>{
+    res.json(states)
   })
 
-app.get('/foodtrucks/:state', (req, res)=>{
+app.get('/states/:stateName', (req, res)=>{
     const state = req.params.state.toLowerCase()
   
-    if(foodtrucks[state]) { //if state(property name) is a property of the foodtrucks object, respond with that properties object (the one you passsed into the brackets).
-        res.json(foodtrucks[state])
+    if(states[stateName]) { //if stateName is a property of the foodtrucks object, respond with that properties object (the one you passsed into the brackets).
+        res.json(states[stateName])
     } else {
-        res.json(foodtrucks['unknown'])
+        res.json(states['unknown'])
     } //if whats passed in doesn't exist respond unknown
-}) //name is just a parameter. The API will respond with whatever name is typed in if it is in the list of foodtrucks.
+}) //name is just a parameter. The API will respond with whatever name is typed in if it is in the list of states.
 
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`The server is running on port ${PORT}! You better go catch it!`)
