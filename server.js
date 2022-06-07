@@ -209,7 +209,7 @@ app.get('/css/style.css', (req,res)=>{
     res.sendFile(__dirname + '/style.css')
   })
   
-  app.get('/js/main.js', (req,res)=>{
+  app.get('/main.js', (req,res)=>{
     res.sendFile(__dirname + '/main.js')
   })
   
