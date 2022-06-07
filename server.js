@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express') //requires express module
 const app = express()
 const cors = require('cors')
@@ -201,21 +202,33 @@ const states = {
 
 }
 
-app.get('/', (req, res)=>{
-    res.sendFile(__dirname + '/index.html')
-})
 
-app.get('/css/style.css', (req,res)=>{
-    res.sendFile(__dirname + '/style.css')
+  app.get('/', (req,res)=>{
+    res.sendFile(__dirname + '/index.html')
   })
   
-  app.get('/main.js', (req,res)=>{
-    res.sendFile(__dirname + '/main.js')
+  app.get('/css/reset.css', (req,res)=>{
+    res.sendFile(__dirname + '/css/reset.css')
   })
   
-  app.get('/states', (req,res)=>{
+  app.get('/css/style.css', (req,res)=>{
+    res.sendFile(__dirname + '/css/style.css')
+  })
+  
+  app.get('/js/main.js', (req,res)=>{
+    res.sendFile(__dirname + '/js/main.js')
+  })
+
+
+// // Static Files
+// app.use(express.static('public'));
+// // Specific folder example
+// app.use('/css', express.static(__dirname + 'public/css'))
+// app.use(express.static(__dirname + 'public/main.js'))
+  
+app.get('/states', (req,res)=>{
     res.json(states)
-  })
+})
 
 app.get('/states/:stateName', (req, res)=>{
     const stateName = req.params.stateName.toLowerCase()
