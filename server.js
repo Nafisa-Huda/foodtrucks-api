@@ -206,11 +206,11 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/css/style.css', (req,res)=>{
-    res.sendFile(__dirname + '/css/style.css')
+    res.sendFile(__dirname + '/style.css')
   })
   
   app.get('/js/main.js', (req,res)=>{
-    res.sendFile(__dirname + '/js/main.js')
+    res.sendFile(__dirname + '/main.js')
   })
   
   app.get('/states', (req,res)=>{
