@@ -215,8 +215,8 @@ const states = {
     res.sendFile(__dirname + '/css/style.css')
   })
   
-  app.get('/js/main.js', (req,res)=>{
-    res.sendFile(__dirname + '/js/main.js')
+  app.get('/main.js', (req,res)=>{
+    res.sendFile(__dirname + '/main.js')
   })
 
 
