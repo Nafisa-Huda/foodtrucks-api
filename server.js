@@ -206,9 +206,10 @@ const states = {
   app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/index.html')
   })
-  
-  app.get('/css/reset.css', (req,res)=>{
-    res.sendFile(__dirname + '/css/reset.css')
+
+
+  app.get('/documentation.html', (req,res)=>{
+    res.sendFile(__dirname + '/documentation')
   })
   
   app.get('/css/style.css', (req,res)=>{
@@ -218,13 +219,6 @@ const states = {
   app.get('/main.js', (req,res)=>{
     res.sendFile(__dirname + '/main.js')
   })
-
-
-// // Static Files
-// app.use(express.static('public'));
-// // Specific folder example
-// app.use('/css', express.static(__dirname + 'public/css'))
-// app.use(express.static(__dirname + 'public/main.js'))
   
 app.get('/states', (req,res)=>{
     res.json(states)
