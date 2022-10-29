@@ -1,7 +1,7 @@
 # foodtrucks-api
 
 Link: https://foodtruck-by-state-api.herokuapp.com/
-<img src="https://github.com/Nafisa-Huda/foodtrucks-api/blob/main/Screen%20Shot%202022-06-07%20at%202.23.03%20PM.png"></img>
+<img src="https://github.com/Nafisa-Huda/foodtrucks-api/blob/main/foodtruck-screenshot.png"></img>
 
 ## About:
 A simple API for the top foodtruck in each US state. 
