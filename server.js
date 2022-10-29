@@ -205,9 +205,16 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/main.js", (req, res) => {
-  res.sendFile(__dirname + "/main.js");
-});
+
+// app.get("/dist/output.css", (req, res) => {
+//   res.sendFile(__dirname + "/dist/output.css");
+// });
+
+// app.get("/main.js", (req, res) => {
+//   res.sendFile(__dirname + "/main.js");
+// });
+
+app.use(express.static('public'))
 
 app.get("/states", (req, res) => {
   res.json(states);
