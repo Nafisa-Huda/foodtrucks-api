@@ -205,14 +205,6 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/documentation.html", (req, res) => {
-  res.sendFile(__dirname + "/documentation");
-});
-
-app.get("/css/style.css", (req, res) => {
-  res.sendFile(__dirname + "/css/style.css");
-});
-
 app.get("/main.js", (req, res) => {
   res.sendFile(__dirname + "/main.js");
 });
@@ -234,4 +226,4 @@ app.get("/states/:stateName", (req, res) => {
 
 app.listen(process.env.PORT || PORT, () => {
   console.log(`The server is running on port ${PORT}! You better go catch it!`);
-}); //if heroku doesn't use our hardcoded port they use there own port
+}); 
